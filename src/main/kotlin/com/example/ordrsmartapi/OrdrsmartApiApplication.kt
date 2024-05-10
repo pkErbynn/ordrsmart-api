@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class OrdrsmartApiApplication
 
 fun main(args: Array<String>) {
-	runApplication<OrdrsmartApiApplication>(*args)
+	runApplication<OrdrsmartApiApplication>(*args).close();
 }
