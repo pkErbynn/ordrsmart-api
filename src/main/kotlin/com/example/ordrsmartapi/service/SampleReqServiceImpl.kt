@@ -17,8 +17,6 @@ class SampleReqServiceImpl(
 ) : ISampleReqService {
 
     override fun getSampleRequestById(id: Long): ResponseOfSampleRequestDto {
-
-
         val optionalSampleRequest = sampleReq.findById(id)
         val sampleRequest = optionalSampleRequest.orElseThrow { SampleRequestException("SampleRequest with id $id is not present") }
         return mapToResponseDto(sampleRequest)
@@ -40,6 +38,5 @@ class SampleReqServiceImpl(
                         createdBy = sampleRequest.createdBy
                 )
         )
-
     }
 }

@@ -17,4 +17,10 @@ class ExceptionHandler {
         val error = ApiError(exception.message)
         return ResponseEntity(error, error.status)
     }
+
+    @ExceptionHandler(SampleRequestException::class)
+    fun sampleRequestExceptionHandler(exception: Exception): ResponseEntity<ApiError>{
+        val error = ApiError(exception.message)
+        return ResponseEntity(error, error.status)
+    }
 }

@@ -14,7 +14,7 @@ class ProductServiceImpl(
 ) : IProductService {
     override fun createProduct(productDTO: ProductDTO): ProductDTO {
         if (productDTO.id.toInt() != -1) {
-            throw ProductException("Id should not be provided")
+            throw ProductException("Product Id should not be provided")
         }
 
         val product = productRepository.save(entityDtoMapper.fromProductDtoToEntity(productDTO))
@@ -22,7 +22,9 @@ class ProductServiceImpl(
     }
 
     override fun getProduct(id: Long): ProductDTO {
-        TODO("Not yet implemented")
+        val optionalProduct = productRepository.findById(id)
+        val product = optionalProduct.orElseThrow { ProductException("Product with id $id is not present") }
+        return entityDtoMapper.fromProductEntityToDto(product)
     }
 
     override fun updateProduct(movieDTO: ProductDTO): ProductDTO {
