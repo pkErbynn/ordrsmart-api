@@ -10,3 +10,11 @@ data class AddressDTO(
         val state: String,
         val zipCode: String
 )
+
+data class ReadAddressDTO(
+        val line1: String,
+        val line2: String?,
+        val city: String,
+        val state: String,
+        val zipCode: String
+)

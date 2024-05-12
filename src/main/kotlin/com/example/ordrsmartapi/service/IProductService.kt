@@ -7,9 +7,11 @@ interface IProductService {
 
 //    fun getProducts(): List<ProductDTO>
 
-    fun getProduct(id: Int): ProductDTO
+    fun getProduct(id: Long): ProductDTO
 
     fun updateProduct(movieDTO: ProductDTO): ProductDTO
 
     fun deleteProduct(id: Int)
 }
+
+
