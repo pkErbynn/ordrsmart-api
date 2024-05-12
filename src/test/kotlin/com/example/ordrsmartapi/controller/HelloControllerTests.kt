@@ -16,7 +16,7 @@ class HelloControllerTests {
 
     @Test
     fun `should return default message`() {
-        mockMvc.perform(get("/"))
+        mockMvc.perform(get("/hello"))
                 .andExpect(status().isOk)
                 .andExpect(content().string("Hello, Spring Boot with Kotlin..."))
     }
