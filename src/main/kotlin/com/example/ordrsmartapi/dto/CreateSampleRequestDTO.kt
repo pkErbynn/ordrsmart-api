@@ -1,3 +1,5 @@
+
+
 package com.example.ordrsmartapi.dto
 
 data class CreateSampleRequestDTO (
@@ -17,5 +19,3 @@ data class ShippingAddress (
         var state: String,
         var zip_code: String,
 )
-
-

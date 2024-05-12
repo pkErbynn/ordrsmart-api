@@ -1,8 +1,6 @@
 package com.example.ordrsmartapi.service
 
-import com.example.ordrsmartapi.dto.ProductDTO
-import com.example.ordrsmartapi.dto.ReadSampleRequestDto
-import com.example.ordrsmartapi.dto.ResponseOfSampleRequestDto
+import com.example.ordrsmartapi.dto.*
 import com.example.ordrsmartapi.entity.SampleRequest
 import com.example.ordrsmartapi.repository.ISampleReqRepository
 import com.example.ordrsmartapi.utils.exception.SampleRequestException
@@ -28,8 +26,16 @@ class SampleReqServiceImpl(
                 message = "successfully got sample request",
                 sampleRequest =  ReadSampleRequestDto(
                         id = sampleRequest.id,
-                        product = ProductDTO(sampleRequest.product.id, sampleRequest.product.name),
-//                        variant = ProductVariantDTO(id = sampleRequest.variant.id, values = sampleRequest.variant.attributes),
+                        product = ProductDTO(
+                                id = sampleRequest.product.id,
+                                name = sampleRequest.product.name),
+                        variant = ReadVariantDto(
+                                id = sampleRequest.variant.id,
+                                values = VariantInnerDto(
+                                        concentration = sampleRequest.variant.concentration,
+                                        flavor = sampleRequest.variant.flavor,
+                                        weight = sampleRequest.variant.weight)
+                        ),
                         sampleQuantity = sampleRequest.sampleQuantity,
                         sampleApplication = sampleRequest.sampleApplication,
                         shippingAddress = mapper.mapAddressToDto(sampleRequest.shippingAddress),

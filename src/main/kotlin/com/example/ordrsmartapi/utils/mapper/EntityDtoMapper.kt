@@ -3,7 +3,6 @@ package com.example.ordrsmartapi.utils.mapper
 import com.example.ordrsmartapi.dto.*
 import com.example.ordrsmartapi.entity.Address
 import com.example.ordrsmartapi.entity.Product
-import com.example.ordrsmartapi.entity.ProductVariant
 import org.springframework.stereotype.Service
 
 @Service

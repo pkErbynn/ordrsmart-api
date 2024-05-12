@@ -16,7 +16,7 @@ data class SampleRequest(
 
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "variant_id")
-        val variant: ProductVariant,
+        val variant: Variant,
 
         val sampleQuantity: String,
         val sampleApplication: String,

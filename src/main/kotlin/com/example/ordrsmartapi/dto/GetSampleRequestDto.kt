@@ -8,7 +8,7 @@ data class GetSampleRequestDto (
 data class ReadSampleRequestDto(
         val id: Long,
         val product: ProductDTO,
-//        val variant: ProductVariantDTO,
+        val variant: ReadVariantDto,
         val sampleQuantity: String,
         val sampleApplication: String,
         val shippingAddress: ReadAddressDTO,
