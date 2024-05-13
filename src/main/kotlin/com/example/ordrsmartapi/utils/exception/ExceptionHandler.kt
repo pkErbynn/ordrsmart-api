@@ -19,6 +19,12 @@ class ExceptionHandler {
         return ResponseEntity(error, error.status)
     }
 
+    @ExceptionHandler(AddressException::class)
+    fun addressExceptionHandler(exception: Exception): ResponseEntity<ApiError>{
+        val error = ApiError(message = exception.message, status = HttpStatus.NOT_FOUND)
+        return ResponseEntity(error, error.status)
+    }
+
     @ExceptionHandler(SampleRequestException::class)
     fun sampleRequestExceptionHandler(exception: Exception): ResponseEntity<ApiError>{
         val error = ApiError(message = exception.message, status =  HttpStatus.NOT_FOUND)

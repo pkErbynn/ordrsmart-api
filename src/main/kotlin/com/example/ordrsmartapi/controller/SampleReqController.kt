@@ -1,23 +1,23 @@
 package com.example.ordrsmartapi.controller
 
-import com.example.ordrsmartapi.dto.GetSampleRequestDto
+import com.example.ordrsmartapi.dto.SampleRequestGetDto
 import com.example.ordrsmartapi.dto.ResponseOfSampleRequestDto
-import com.example.ordrsmartapi.entity.SampleRequest
-import com.example.ordrsmartapi.service.ISampleReqService
+import com.example.ordrsmartapi.dto.SampleRequestCreateDTO
+import com.example.ordrsmartapi.service.ISampleRequestService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 class SampleReqController (
-        private val sampleRequestService: ISampleReqService)  {
+        private val sampleRequestService: ISampleRequestService)  {
 
-    @GetMapping("/sample-requests")
-    fun getSampleRequest(@RequestBody sampleRequestGetDto: GetSampleRequestDto): ResponseEntity<ResponseOfSampleRequestDto> {
+    @GetMapping("/sample-requests")     //  @GetMapping("/sample-requests/{id}")    // @PathVariable id
+    fun getSampleRequest(@RequestBody sampleRequestGetDto: SampleRequestGetDto): ResponseEntity<ResponseOfSampleRequestDto> {
         return ResponseEntity.ok(sampleRequestService.getSampleRequestById(sampleRequestGetDto.sample_request_id))
     }
 
-//    @PostMapping("/sample-requests")
-//    fun createSampleRequest(@RequestBody sampleRequestCreateDto: CreateSampleRequest): ResponseEntity<ResponseOfSampleRequestDto> {
-//        return ResponseEntity.ok(sampleRequestService.getSampleRequestById(sampleRequestCreateDto.sample_request_id))
-//    }
+    @PostMapping("/sample-requests")
+    fun createSampleRequest(@RequestBody sampleRequestCreateDto: SampleRequestCreateDTO): ResponseEntity<ResponseOfSampleRequestDto> {
+        return ResponseEntity.ok(sampleRequestService.createSampleRequestById(sampleRequestCreateDto))
+    }
 }

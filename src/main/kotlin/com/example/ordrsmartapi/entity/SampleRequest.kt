@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 data class SampleRequest(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val id: Long = 0,
+        val id: Long,
 
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "product_id")

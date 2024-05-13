@@ -17,11 +17,8 @@ class EntityDtoMapper: IMapper<ProductDTO, Product> {
         entity.name,
     )
 
-//    fun mapVariantToDto(variant: ProductVariant): ProductVariantDTO = ProductVariantDTO(
-//            id = variant.id,
-//            values = ReadProductVariantAttributesDTO(variant.attributes.keys.toString(), variant.attributes.values.toString())
-//    )
-    fun mapAddressToDto(address: Address): ReadAddressDTO = ReadAddressDTO(
+
+    fun mapAddressEntityToDto(address: Address): AddressDTO = AddressDTO(
             line1 = address.line1,
             line2 = address.line2,
             city = address.city,
@@ -29,7 +26,16 @@ class EntityDtoMapper: IMapper<ProductDTO, Product> {
             zipCode = address.zipCode
     )
 
+    fun mapAddressCreateDtotoEntity(address: AddressCreateDTO): Address = Address(
+            line1 = address.line_1,
+            line2 = address.line_2,
+            city = address.city,
+            state = address.state,
+            zipCode = address.zip_code,
+            id = -1
+    )
 
+//    fun mapSampleRequestDTOtoEntity(sampleRequest: SampleRequestCreateDTO)
 
 
 }
