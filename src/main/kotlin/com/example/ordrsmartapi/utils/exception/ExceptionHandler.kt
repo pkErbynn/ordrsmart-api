@@ -1,5 +1,6 @@
 package com.example.ordrsmartapi.utils.exception
 
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
@@ -14,7 +15,19 @@ class ExceptionHandler {
 
     @ExceptionHandler(ProductException::class)
     fun productExceptionHandler(exception: Exception): ResponseEntity<ApiError>{
-        val error = ApiError(exception.message)
+        val error = ApiError(message = exception.message, status = HttpStatus.NOT_FOUND)
+        return ResponseEntity(error, error.status)
+    }
+
+    @ExceptionHandler(AddressException::class)
+    fun addressExceptionHandler(exception: Exception): ResponseEntity<ApiError>{
+        val error = ApiError(message = exception.message, status = HttpStatus.NOT_FOUND)
+        return ResponseEntity(error, error.status)
+    }
+
+    @ExceptionHandler(SampleRequestException::class)
+    fun sampleRequestExceptionHandler(exception: Exception): ResponseEntity<ApiError>{
+        val error = ApiError(message = exception.message, status =  HttpStatus.NOT_FOUND)
         return ResponseEntity(error, error.status)
     }
 }
