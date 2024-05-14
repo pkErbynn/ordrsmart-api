@@ -1,7 +1,7 @@
 package com.example.ordrsmartapi.controller
 
 import com.example.ordrsmartapi.dto.ProductDTO
-import com.example.ordrsmartapi.service.IProductService
+import com.example.ordrsmartapi.service.interfaces.IProductService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

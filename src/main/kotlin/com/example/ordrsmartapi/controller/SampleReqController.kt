@@ -3,7 +3,7 @@ package com.example.ordrsmartapi.controller
 import com.example.ordrsmartapi.dto.SampleRequestGetDto
 import com.example.ordrsmartapi.dto.ResponseOfSampleRequestDto
 import com.example.ordrsmartapi.dto.SampleRequestCreateDTO
-import com.example.ordrsmartapi.service.ISampleRequestService
+import com.example.ordrsmartapi.service.interfaces.ISampleRequestService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
