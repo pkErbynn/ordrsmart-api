@@ -6,6 +6,7 @@ import com.example.ordrsmartapi.entity.Product
 import org.springframework.stereotype.Service
 
 
+@Service
 class EntityDtoMapper: IEntityDtoMapper {
     override fun fromProductDtoToEntity(domain: ProductDTO): Product = Product (
         domain.id,
@@ -17,7 +18,7 @@ class EntityDtoMapper: IEntityDtoMapper {
         entity.name,
     )
 
-    fun mapAddressEntityToDto(address: Address): AddressDTO = AddressDTO(
+    override fun mapAddressEntityToDto(address: Address): AddressDTO = AddressDTO(
             line1 = address.line1,
             line2 = address.line2,
             city = address.city,
@@ -25,7 +26,7 @@ class EntityDtoMapper: IEntityDtoMapper {
             zipCode = address.zipCode
     )
 
-    fun mapAddressCreateDtotoEntity(address: AddressCreateDTO): Address = Address(
+    override fun mapAddressCreateDtotoEntity(address: AddressCreateDTO): Address = Address(
             line1 = address.line_1,
             line2 = address.line_2,
             city = address.city,
@@ -33,10 +34,4 @@ class EntityDtoMapper: IEntityDtoMapper {
             zipCode = address.zip_code,
             id = -1
     )
-
-
-
-//    fun mapSampleRequestDTOtoEntity(sampleRequest: SampleRequestCreateDTO)
-
-
 }
