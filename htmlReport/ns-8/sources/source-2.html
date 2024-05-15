@@ -1,0 +1,92 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > IAddressRepository</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.ordrsmartapi.repository</a>
+</div>
+
+<h1>Coverage Summary for Class: IAddressRepository (com.example.ordrsmartapi.repository)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">IAddressRepository$MockitoMock$933007770</td>
+  </tr>
+  <tr>
+    <td class="name">IAddressRepository$MockitoMock$933007770$auxiliary$EUU8c5eE</td>
+  </tr>
+  <tr>
+    <td class="name">IAddressRepository$MockitoMock$933007770$auxiliary$u7NegK87</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.ordrsmartapi.repository // without package namespace, repository won&#39;t be recognised by Bean Scanner for DI
+&nbsp;
+&nbsp;import com.example.ordrsmartapi.entity.Address
+&nbsp;import org.springframework.data.repository.CrudRepository
+&nbsp;import org.springframework.stereotype.Repository
+&nbsp;
+&nbsp;/**
+&nbsp; * Repository interface for Address entities.
+&nbsp; * Provides CRUD operations for Address entities.
+&nbsp; * Extends CrudRepository to handle data access for Address entities with Long as the primary key.
+&nbsp; */
+&nbsp;@Repository
+&nbsp;interface IAddressRepository: CrudRepository&lt;Address, Long&gt; {
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-15 07:55</div>
+</div>
+</body>
+</html>

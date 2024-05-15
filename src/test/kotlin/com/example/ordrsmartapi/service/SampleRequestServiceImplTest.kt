@@ -3,7 +3,6 @@ package com.example.ordrsmartapi.service
 import com.example.ordrsmartapi.MockitoHelper
 import com.example.ordrsmartapi.dto.AddressCreateDTO
 import com.example.ordrsmartapi.dto.AddressDTO
-import com.example.ordrsmartapi.dto.ProductDTO
 import com.example.ordrsmartapi.dto.SampleRequestCreateDTO
 import com.example.ordrsmartapi.entity.Address
 import com.example.ordrsmartapi.entity.Product
@@ -13,14 +12,11 @@ import com.example.ordrsmartapi.repository.IAddressRepository
 import com.example.ordrsmartapi.repository.IProductRepository
 import com.example.ordrsmartapi.repository.ISampleRequestRepository
 import com.example.ordrsmartapi.repository.IVariantRepository
-import com.example.ordrsmartapi.utils.exception.ProductException
 import com.example.ordrsmartapi.utils.exception.SampleRequestException
-import com.example.ordrsmartapi.utils.mapper.EntityDtoMapper
 import com.example.ordrsmartapi.utils.mapper.IEntityDtoMapper
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.ArgumentMatchers
 import org.mockito.ArgumentMatchers.any
 import org.mockito.ArgumentMatchers.anyLong
 import org.mockito.InjectMocks

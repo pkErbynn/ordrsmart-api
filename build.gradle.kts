@@ -6,7 +6,12 @@ plugins {
 	kotlin("jvm") version "1.9.23"
 	kotlin("plugin.spring") version "1.9.23"
 	kotlin("plugin.jpa") version "1.9.23"
+//	id("com.bmuschko.docker-remote-api") version "9.4.0"
+	id("com.google.cloud.tools.jib") version "2.3.0"
 }
+
+//apply(plugin = "com.bmuschko.docker-remote-api")
+
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
@@ -28,14 +33,12 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation ("jakarta.persistence:jakarta.persistence-api:3.1.0")
 	testImplementation ("org.mockito.kotlin:mockito-kotlin:5.3.1")
+	implementation("com.h2database:h2")
 
-//	testImplementation("org.mockito:mockito-core:3.6.0")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-
-//	testImplementation ("org.junit.jupiter:junit-jupiter-api:5.7.0")
-//	testImplementation ("org.mockito:mockito-core:3.6.0")
-//	testImplementation ("org.mockito:mockito-junit-jupiter:3.6.0")
-//	testImplementation(kotlin("test"))
+	testImplementation("org.mockito:mockito-core:3.6.0")
+	testImplementation("org.mockito:mockito-junit-jupiter:3.6.0")
 }
 
 tasks.withType<KotlinCompile> {
@@ -46,6 +49,6 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
-	jvmArgs("-XX:+EnableDynamicAgentLoading")
+//	jvmArgs("-XX:+EnableDynamicAgentLoading")
 	useJUnitPlatform()
 }

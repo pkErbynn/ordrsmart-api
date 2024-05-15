@@ -1,0 +1,128 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > SampleRequestController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.ordrsmartapi.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: SampleRequestController (com.example.ordrsmartapi.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SampleRequestController</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.ordrsmartapi.controller
+&nbsp;
+&nbsp;import com.example.ordrsmartapi.dto.SampleRequestGetDto
+&nbsp;import com.example.ordrsmartapi.dto.ResponseOfSampleRequestDto
+&nbsp;import com.example.ordrsmartapi.dto.SampleRequestCreateDTO
+&nbsp;import com.example.ordrsmartapi.service.interfaces.ISampleRequestService
+&nbsp;import org.springframework.data.jpa.domain.AbstractPersistable_.id
+&nbsp;import org.springframework.http.ResponseEntity
+&nbsp;import org.springframework.web.bind.annotation.*
+&nbsp;
+<b class="nc">&nbsp;@RestController</b>
+&nbsp;class SampleRequestController (
+<b class="nc">&nbsp;        private val sampleRequestService: ISampleRequestService)  {</b>
+&nbsp;
+&nbsp;    @GetMapping(&quot;/sample-requests&quot;)     //  @GetMapping(&quot;/sample-requests/{id}&quot;)    // @PathVariable id
+&nbsp;    fun getSampleRequest(@RequestBody sampleRequestGetDto: SampleRequestGetDto): ResponseEntity&lt;ResponseOfSampleRequestDto&gt; {
+<b class="nc">&nbsp;        return ResponseEntity.ok(sampleRequestService.getSampleRequestById(sampleRequestGetDto.sample_request_id))</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @PostMapping(&quot;/sample-requests&quot;)
+&nbsp;    fun createSampleRequest(@RequestBody sampleRequestCreateDto: SampleRequestCreateDTO): ResponseEntity&lt;ResponseOfSampleRequestDto&gt; {
+<b class="nc">&nbsp;        return ResponseEntity.ok(sampleRequestService.createSampleRequestById(sampleRequestCreateDto))</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-15 07:55</div>
+</div>
+</body>
+</html>
