@@ -1,4 +1,4 @@
-package com.example.ordrsmartapi.service
+package com.example.ordrsmartapi.service.interfaces
 
 import com.example.ordrsmartapi.dto.AddressCreateDTO
 import com.example.ordrsmartapi.dto.AddressDTO

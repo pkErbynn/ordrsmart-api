@@ -1,5 +1,3 @@
-
-
 package com.example.ordrsmartapi.dto
 
 data class SampleRequestCreateDTO (

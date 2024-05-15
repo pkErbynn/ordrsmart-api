@@ -1,25 +1,27 @@
 package com.example.ordrsmartapi.service
 
 import com.example.ordrsmartapi.dto.*
+import com.example.ordrsmartapi.entity.Address
 import com.example.ordrsmartapi.entity.SampleRequest
 import com.example.ordrsmartapi.repository.IAddressRepository
 import com.example.ordrsmartapi.repository.IProductRepository
-import com.example.ordrsmartapi.repository.ISampleReqRepository
+import com.example.ordrsmartapi.repository.ISampleRequestRepository
 import com.example.ordrsmartapi.repository.IVariantRepository
+import com.example.ordrsmartapi.service.interfaces.ISampleRequestService
 import com.example.ordrsmartapi.utils.exception.SampleRequestException
 import com.example.ordrsmartapi.utils.mapper.EntityDtoMapper
+import com.example.ordrsmartapi.utils.mapper.IEntityDtoMapper
 import org.springframework.stereotype.Service
 
 
 @Service
 class SampleRequestServiceImpl(
-        private val sampleRequestRepository: ISampleReqRepository,
+        private val sampleRequestRepository: ISampleRequestRepository,
         private val productRepository: IProductRepository,
         private val variantRepository: IVariantRepository,
         private val addressRepository: IAddressRepository,
-        private val mapper: EntityDtoMapper
-) : ISampleRequestService {
-
+        private val mapper: IEntityDtoMapper,
+        ) : ISampleRequestService {
     override fun getSampleRequestById(id: Long): ResponseOfSampleRequestDto {
         val optionalSampleRequest = sampleRequestRepository.findById(id)
         val sampleRequestEntity = optionalSampleRequest.orElseThrow { SampleRequestException("SampleRequest with id $id is not present") }
@@ -29,12 +31,12 @@ class SampleRequestServiceImpl(
     override fun createSampleRequestById(sampleRequestCreateDto: SampleRequestCreateDTO): ResponseOfSampleRequestDto {
         val optionalProduct = productRepository.findById(sampleRequestCreateDto.product_id)
         val product = optionalProduct.orElseThrow { SampleRequestException("SampleRequest can't be created with invalid productId ${sampleRequestCreateDto.product_id}")}
+
         val optionalVariant = variantRepository.findById(sampleRequestCreateDto.variant_id)
         val variant = optionalVariant.orElseThrow { SampleRequestException("SampleRequest can't be created with invalid variantId ${sampleRequestCreateDto.variant_id}")}
 
-        val addressEntity = addressRepository.save(mapper.mapAddressCreateDtotoEntity(
-                sampleRequestCreateDto.shipping_address))
-//        val addressDto = mapper.mapAddressEntityToDto(addressEntity)
+        val addressEntity = addressRepository.save(
+                mapper.mapAddressCreateDtotoEntity(sampleRequestCreateDto.shipping_address))
 
         var sampleRequestEntity = SampleRequest(
                 product = product,

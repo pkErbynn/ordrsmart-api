@@ -27,15 +27,15 @@ dependencies {
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation ("jakarta.persistence:jakarta.persistence-api:3.1.0")
-//	implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")  // Explicit JPA API dependency
+	testImplementation ("org.mockito.kotlin:mockito-kotlin:5.3.1")
 
-//	implementation("org.jetbrains.exposed:exposed-core:0.36.2")
-//	implementation("org.jetbrains.exposed:exposed-dao:0.36.2")
-//	implementation("org.jetbrains.exposed:exposed-jdbc:0.36.2")
+//	testImplementation("org.mockito:mockito-core:3.6.0")
 
-//	testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
-//	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 
+//	testImplementation ("org.junit.jupiter:junit-jupiter-api:5.7.0")
+//	testImplementation ("org.mockito:mockito-core:3.6.0")
+//	testImplementation ("org.mockito:mockito-junit-jupiter:3.6.0")
+//	testImplementation(kotlin("test"))
 }
 
 tasks.withType<KotlinCompile> {
@@ -46,5 +46,6 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
+	jvmArgs("-XX:+EnableDynamicAgentLoading")
 	useJUnitPlatform()
 }

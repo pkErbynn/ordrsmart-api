@@ -2,7 +2,7 @@ package com.example.ordrsmartapi.controller
 
 import com.example.ordrsmartapi.dto.AddressCreateDTO
 import com.example.ordrsmartapi.dto.AddressDTO
-import com.example.ordrsmartapi.service.IAddressService
+import com.example.ordrsmartapi.service.interfaces.IAddressService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
