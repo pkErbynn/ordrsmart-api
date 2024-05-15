@@ -4,11 +4,12 @@ import com.example.ordrsmartapi.dto.SampleRequestGetDto
 import com.example.ordrsmartapi.dto.ResponseOfSampleRequestDto
 import com.example.ordrsmartapi.dto.SampleRequestCreateDTO
 import com.example.ordrsmartapi.service.interfaces.ISampleRequestService
+import org.springframework.data.jpa.domain.AbstractPersistable_.id
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
-class SampleReqController (
+class SampleRequestController (
         private val sampleRequestService: ISampleRequestService)  {
 
     @GetMapping("/sample-requests")     //  @GetMapping("/sample-requests/{id}")    // @PathVariable id

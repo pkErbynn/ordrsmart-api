@@ -28,14 +28,13 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation ("jakarta.persistence:jakarta.persistence-api:3.1.0")
 	testImplementation ("org.mockito.kotlin:mockito-kotlin:5.3.1")
+	implementation("com.h2database:h2")
 
-//	testImplementation("org.mockito:mockito-core:3.6.0")
+	implementation("com.h2database:h2")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-
-//	testImplementation ("org.junit.jupiter:junit-jupiter-api:5.7.0")
-//	testImplementation ("org.mockito:mockito-core:3.6.0")
-//	testImplementation ("org.mockito:mockito-junit-jupiter:3.6.0")
-//	testImplementation(kotlin("test"))
+	testImplementation("org.mockito:mockito-core:3.6.0")
+	testImplementation("org.mockito:mockito-junit-jupiter:3.6.0")
 }
 
 tasks.withType<KotlinCompile> {
@@ -46,6 +45,6 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
-	jvmArgs("-XX:+EnableDynamicAgentLoading")
+//	jvmArgs("-XX:+EnableDynamicAgentLoading")
 	useJUnitPlatform()
 }
