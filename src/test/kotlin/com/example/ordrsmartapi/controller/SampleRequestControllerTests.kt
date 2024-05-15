@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.ArgumentMatchers.any
 import org.mockito.Mockito.`when`
 import org.mockito.junit.jupiter.MockitoExtension
 import org.springframework.beans.factory.annotation.Autowired
@@ -22,7 +21,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import java.time.LocalDateTime
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 
 @ExtendWith(MockitoExtension::class)
 @WebMvcTest(SampleRequestController::class)
@@ -71,23 +69,6 @@ class SampleRequestControllerTests {
         .andExpect(jsonPath("$.sampleRequest.id").value(1L))
         .andExpect(jsonPath("$.sampleRequest.product.name").value("Product"))
     }
-
-//    @Test
-//    fun `test getSampleRequest not found`() {
-//        `when`(sampleRequestService.getSampleRequestById(1L)).thenThrow(SampleRequestException("SampleRequest with id 1 is not present"))
-//
-//        mockMvc.perform(
-//                get("/sample-requests")
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content(objectMapper.writeValueAsString(SampleRequestGetDto(sample_request_id = 1L)))
-//        )
-//        .andExpect(status().isNotFound)
-//        .andExpect(jsonPath("$.message").value("SampleRequest with id 1 is not present"))
-//        .andExpect(jsonPath("$.status").value(HttpStatus.NOT_FOUND.value()))
-//
-//    }
-
-
 
     @Test
     fun `test createSampleRequest success`() {
