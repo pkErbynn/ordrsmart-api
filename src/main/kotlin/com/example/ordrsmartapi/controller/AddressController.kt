@@ -11,12 +11,12 @@ class AddressController (
         private val addressService: IAddressService)  {
 
     @GetMapping("/addresses/{id}")
-    fun getSampleRequest(@PathVariable id: Long): ResponseEntity<AddressDTO> {
+    fun getAddressById(@PathVariable id: Long): ResponseEntity<AddressDTO> {
         return ResponseEntity.ok(addressService.getAddress(id))
     }
 
     @PostMapping("/addresses")
-    fun createSampleRequest(@RequestBody addressCreateDTO: AddressCreateDTO): ResponseEntity<AddressDTO> {
+    fun createAddress(@RequestBody addressCreateDTO: AddressCreateDTO): ResponseEntity<AddressDTO> {
         return ResponseEntity.ok(addressService.createAddress(addressCreateDTO))
     }
 }

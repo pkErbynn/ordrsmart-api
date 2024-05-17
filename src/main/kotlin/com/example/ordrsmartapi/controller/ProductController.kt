@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.*
 class ProductController (
         private val productService: IProductService)  {
     @PostMapping("/products")
-    fun createMovie(@RequestBody productDTO: ProductDTO): ResponseEntity<ProductDTO> {
+    fun createProduct(@RequestBody productDTO: ProductDTO): ResponseEntity<ProductDTO> {
         return ResponseEntity(productService.createProduct(productDTO), HttpStatus.CREATED)
     }
 
     @GetMapping("/products/{id}")
-    fun getMovie(@PathVariable id: Long): ResponseEntity<ProductDTO> {
+    fun getProduct(@PathVariable id: Long): ResponseEntity<ProductDTO> {
         return ResponseEntity.ok(productService.getProduct(id))
     }
 }

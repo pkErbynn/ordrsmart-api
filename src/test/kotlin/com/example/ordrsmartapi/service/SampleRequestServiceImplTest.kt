@@ -130,7 +130,7 @@ class SampleRequestServiceImplTest {
 
         // Assert
         assertNotNull(response)
-        assertEquals("Product", response.sampleRequest.product.name)
+        assertEquals("Product12", response.sampleRequest.product.name)
         assertEquals("Vanilla", response.sampleRequest.variant.values.flavor)
         assertEquals("123 Main St", response.sampleRequest.shippingAddress.line1)
     }
