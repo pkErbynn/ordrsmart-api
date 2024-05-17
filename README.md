@@ -19,7 +19,7 @@ In short, it's used to create and retrieve ingredient sample requests made my cu
 - **Exception:** Custom exception classes and global exception handler.
 
 ### Architecture
-![Screenshot 2024-05-16 at 20.36.14.png](..%2F..%2FPictures%2FScreenshots%2FScreenshot%202024-05-16%20at%2020.36.14.png)
+![Response](./assets/Screenshot%202024-05-16%20at%2020.36.14.png)
 
 ### Setup
 1. Clone the Repository
@@ -120,5 +120,4 @@ Request Body: <br>
 Response:
 
 Response:
-![Screenshot 2024-05-17 at 10.27.53.png](..%2F..%2FPictures%2FScreenshots%2FScreenshot%202024-05-17%20at%2010.27.53.png)
-
+![Response](./assets/Screenshot%202024-05-17%20at%2010.27.53.png)
