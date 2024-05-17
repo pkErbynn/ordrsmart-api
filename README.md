@@ -23,7 +23,7 @@ In short, it's used to create and retrieve ingredient sample requests made my cu
 
 ### Technologies Used
 1. Kotlin
-2. Spring Boot**
+2. Spring Boot
 3. Hibernate JPA
 4. PostgreSQL
 5. Docker
