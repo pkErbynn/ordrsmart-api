@@ -21,6 +21,18 @@ In short, it's used to create and retrieve ingredient sample requests made my cu
 ### Architecture
 ![Response](./assets/Screenshot%202024-05-16%20at%2020.36.14.png)
 
+### Technologies Used
+1. Kotlin
+2. Spring Boot**
+3. Hibernate
+4. PostgreSQL
+5. Docker
+6. Gradle
+7. JUnit
+8. Mockito
+9. Postman
+10. Git/GitHub
+
 ### Setup
 1. Clone the Repository
    First, clone the repository from GitHub:
