@@ -133,3 +133,18 @@ Response:
 
 Response:
 ![Response](./assets/Screenshot%202024-05-17%20at%2010.27.53.png)
+
+
+### Test Coverage Reports
+
+Unit and Integration tests coverage for Service layer
+
+![Unit test result](./assets/screencapture-2.png)
+
+Unit and Integration tests for Controller layer
+
+![Unit test result](./assets/screencapture-3.png)
+
+Test report for sample DTO
+
+![Unit test result](./assets/screencapture-1.png)
