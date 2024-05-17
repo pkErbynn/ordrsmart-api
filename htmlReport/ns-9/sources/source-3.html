@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>Coverage Report > IAddressService</title>
+  <title>Coverage Report > ISampleRequestService</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,16 +22,25 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.example.ordrsmartapi.service.interfaces</a>
 </div>
 
-<h1>Coverage Summary for Class: IAddressService (com.example.ordrsmartapi.service.interfaces)</h1>
+<h1>Coverage Summary for Class: ISampleRequestService (com.example.ordrsmartapi.service.interfaces)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
 </tr>
+  <tr>
+    <td class="name">ISampleRequestService$MockitoMock$1790606776</td>
+  </tr>
+  <tr>
+    <td class="name">ISampleRequestService$MockitoMock$1790606776$auxiliary$F4helSqc</td>
+  </tr>
+  <tr>
+    <td class="name">ISampleRequestService$MockitoMock$1790606776$auxiliary$oPgAYex3</td>
+  </tr>
 <tr>
-  <td class="name">IAddressService</td>
+  <td class="name"><strong>Total</strong></td>
 </tr>
-
 </table>
 
 <br/>
@@ -41,13 +50,12 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package com.example.ordrsmartapi.service.interfaces
 &nbsp;
-&nbsp;import com.example.ordrsmartapi.dto.AddressCreateDTO
-&nbsp;import com.example.ordrsmartapi.dto.AddressDTO
-&nbsp;import com.example.ordrsmartapi.dto.ProductDTO
+&nbsp;import com.example.ordrsmartapi.dto.SampleRequestCreateDTO
+&nbsp;import com.example.ordrsmartapi.dto.ResponseOfSampleRequestDto
 &nbsp;
-&nbsp;interface IAddressService {
-&nbsp;    fun createAddress(addressDTO: AddressCreateDTO): AddressDTO
-&nbsp;    fun getAddress(id: Long): AddressDTO
+&nbsp;interface ISampleRequestService {
+&nbsp;    fun getSampleRequestById(id: Long): ResponseOfSampleRequestDto
+&nbsp;    fun createSampleRequestById(sampleRequestCreateDto: SampleRequestCreateDTO): ResponseOfSampleRequestDto
 &nbsp;}
 </code>
 </pre>
@@ -72,7 +80,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-05-15 07:55</div>
+    <div style="float:right;">generated on 2024-05-16 13:13</div>
 </div>
 </body>
 </html>

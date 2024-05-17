@@ -44,26 +44,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">EntityDtoMapper</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    60%
   </span>
   <span class="absValue">
-    (0/5)
+    (3/5)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    70%
   </span>
   <span class="absValue">
-    (0/20)
+    (14/20)
   </span>
 </td>
 </tr>
@@ -83,7 +83,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;import org.springframework.stereotype.Service
 &nbsp;
 &nbsp;
-<b class="nc">&nbsp;@Service</b>
+<b class="fc">&nbsp;@Service</b>
 &nbsp;class EntityDtoMapper: IEntityDtoMapper {
 <b class="nc">&nbsp;    override fun fromProductDtoToEntity(domain: ProductDTO): Product = Product (</b>
 <b class="nc">&nbsp;        domain.id,</b>
@@ -95,21 +95,21 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="nc">&nbsp;        entity.name,</b>
 &nbsp;    )
 &nbsp;
-<b class="nc">&nbsp;    override fun mapAddressEntityToDto(address: Address): AddressDTO = AddressDTO(</b>
-<b class="nc">&nbsp;            line1 = address.line1,</b>
-<b class="nc">&nbsp;            line2 = address.line2,</b>
-<b class="nc">&nbsp;            city = address.city,</b>
-<b class="nc">&nbsp;            state = address.state,</b>
-<b class="nc">&nbsp;            zipCode = address.zipCode</b>
+<b class="fc">&nbsp;    override fun mapAddressEntityToDto(address: Address): AddressDTO = AddressDTO(</b>
+<b class="fc">&nbsp;            line1 = address.line1,</b>
+<b class="fc">&nbsp;            line2 = address.line2,</b>
+<b class="fc">&nbsp;            city = address.city,</b>
+<b class="fc">&nbsp;            state = address.state,</b>
+<b class="fc">&nbsp;            zipCode = address.zipCode</b>
 &nbsp;    )
 &nbsp;
-<b class="nc">&nbsp;    override fun mapAddressCreateDtotoEntity(address: AddressCreateDTO): Address = Address(</b>
-<b class="nc">&nbsp;            line1 = address.line_1,</b>
-<b class="nc">&nbsp;            line2 = address.line_2,</b>
-<b class="nc">&nbsp;            city = address.city,</b>
-<b class="nc">&nbsp;            state = address.state,</b>
-<b class="nc">&nbsp;            zipCode = address.zip_code,</b>
-<b class="nc">&nbsp;            id = -1</b>
+<b class="fc">&nbsp;    override fun mapAddressCreateDtotoEntity(address: AddressCreateDTO): Address = Address(</b>
+<b class="fc">&nbsp;            line1 = address.line_1,</b>
+<b class="fc">&nbsp;            line2 = address.line_2,</b>
+<b class="fc">&nbsp;            city = address.city,</b>
+<b class="fc">&nbsp;            state = address.state,</b>
+<b class="fc">&nbsp;            zipCode = address.zip_code,</b>
+<b class="fc">&nbsp;            id = -1</b>
 &nbsp;    )
 &nbsp;}
 </code>
@@ -135,7 +135,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-05-15 07:55</div>
+    <div style="float:right;">generated on 2024-05-16 13:13</div>
 </div>
 </body>
 </html>
