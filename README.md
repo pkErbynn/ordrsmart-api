@@ -43,6 +43,10 @@ git clone https://github.com/your-username/ordrsmart-api.git
 ```shell
 docker pull postgres:latest
 ```
+> pgAdmin can be used to connect to and manage PostgreSQL databases, including local instances. 
+> However, pgAdmin itself doesn't start a database server; it is a management tool for interacting with databases. 
+> If need to start a PostgreSQL database server, need to be done separately, either by using *Docker*, installing *PostgreSQL directly* on your machine, or using a *cloud-based service* like Azure, AWS.
+
 3. Run PostgreSQL Container with the necessary environment variables:
 
 ```shell
